@@ -7,9 +7,12 @@ import { BsBagCheck } from "react-icons/bs";
 import { MdOutlineEmail } from "react-icons/md";
 import { useEffect, useState } from "react";
 import { CgMenu } from "react-icons/cg";
+import Sidebar from "../../Components/Sidebar";
+import { useSidebarContext } from "../../Context/SidebarContext";
 const Header = () => {
   const { container } = globalStyle;
   const [, setIsScroll] = useState(false);
+  const { handleTriggerSidebar } = useSidebarContext();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,14 +41,31 @@ const Header = () => {
           <h1 className="text-lg font-sans">Mohamed Osama</h1>
         </div>
         <div className="flex items-center gap-8 max-sm:hidden max-xl:gap-4">
-          <LinkHeader linkIcon={<CiHome />} linkTitle="Home" />
-          <LinkHeader linkIcon={<IoPersonOutline />} linkTitle="About" />
-          <LinkHeader linkIcon={<BsBagCheck />} linkTitle="Projects" />
-          <LinkHeader linkIcon={<IoCodeOutline />} linkTitle="Skills" />
-          <LinkHeader linkIcon={<MdOutlineEmail />} linkTitle="Contact" />
+          <LinkHeader linkIcon={<CiHome />} linkTitle="Home" LinkTo="#" />
+          <LinkHeader
+            linkIcon={<IoPersonOutline />}
+            linkTitle="About"
+            LinkTo="#About"
+          />
+          <LinkHeader
+            linkIcon={<BsBagCheck />}
+            linkTitle="Projects"
+            LinkTo="#Projects"
+          />
+          <LinkHeader
+            linkIcon={<IoCodeOutline />}
+            linkTitle="Skills"
+            LinkTo="#Skills"
+          />
+          <LinkHeader
+            linkIcon={<MdOutlineEmail />}
+            linkTitle="Contact"
+            LinkTo="#Contact"
+          />
         </div>
         <div className="sm:hidden">
-          <CgMenu size={25} />
+          <CgMenu size={25} onClick={handleTriggerSidebar} />
+          <Sidebar />
         </div>
       </header>
     </>
