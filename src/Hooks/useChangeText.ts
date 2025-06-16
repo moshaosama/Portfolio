@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 
 const useChangeText = () => {
   const allTexts = ["Full-Stack Developer", "UI/UX Designer"];
-  const [startWord, setStartWord] = useState(allTexts[0]);
-  const [endWord, setEndWord] = useState(allTexts[1]);
+  const [startWord] = useState(allTexts[0]);
+  const [endWord] = useState(allTexts[1]);
   const [text, setText] = useState("");
 
   useEffect(() => {

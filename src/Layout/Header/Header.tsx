@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import { CgMenu } from "react-icons/cg";
 const Header = () => {
   const { container } = globalStyle;
-  const [isScroll, setIsScroll] = useState(false);
+  const [, setIsScroll] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
