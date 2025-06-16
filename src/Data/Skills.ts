@@ -15,14 +15,14 @@ export const SkillData = [
     degree: "80%",
   },
   {
-    name: "TypeScript",
-    color: "blue",
-    degree: "75%",
-  },
-  {
     name: "Angular",
     color: "red",
     degree: "80%",
+  },
+  {
+    name: "TypeScript",
+    color: "blue",
+    degree: "75%",
   },
   {
     name: "MongoDB",
