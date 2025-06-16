@@ -4,6 +4,7 @@ import Header from "../../Layout/Header/Header";
 import About from "../../Features/About/About";
 import Projects from "../../Features/Projects/Projects";
 import Skills from "../../Features/Skills/Skills";
+import TouchMail from "../../Features/TouchMail/TouchMail";
 
 const Home = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -22,6 +23,7 @@ const Home = () => {
         <About />
         <Projects />
         <Skills />
+        <TouchMail />
       </div>
     </>
   );
