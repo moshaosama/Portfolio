@@ -13,7 +13,7 @@ const HeaderForSection = ({
           {rightTitle}
         </span>
       </h1>
-      <p className="text-xl text-gray-300 w-[50pc] text-center">
+      <p className="text-xl text-gray-300 w-[50pc] max-sm:w-[23pc] max-xl:w-[45pc] max-sm:text-lg text-center">
         {Description}
       </p>
     </div>
