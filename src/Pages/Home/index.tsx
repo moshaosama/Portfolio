@@ -5,6 +5,7 @@ import About from "../../Features/About/About";
 import Projects from "../../Features/Projects/Projects";
 import Skills from "../../Features/Skills/Skills";
 import TouchMail from "../../Features/TouchMail/TouchMail";
+import TransitionProvider from "../../Context/TransitionContext";
 
 const Home = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -19,10 +20,12 @@ const Home = () => {
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 animate-gradient-x">
         <Header />
-        <Hero ScrollY={scrollY} />
-        <About />
-        <Projects />
-        <Skills />
+        <TransitionProvider>
+          <Hero ScrollY={scrollY} />
+          <About />
+          <Projects />
+          <Skills />
+        </TransitionProvider>
         <TouchMail />
       </div>
     </>
