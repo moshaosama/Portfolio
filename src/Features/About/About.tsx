@@ -3,27 +3,22 @@ import CardAbout from "../../Components/CardAbout";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { BsLightningCharge } from "react-icons/bs";
 import { MdOutlineColorLens } from "react-icons/md";
+import HeaderForSection from "../../Components/HeaderForSection";
 
 const About = () => {
   return (
     <>
       <div className="flex justify-center mt-5 text-white">
         <div className="flex flex-col items-center justify-center gap-20">
-          <div className="flex flex-col items-center justify-center gap-5">
-            <h1 className="text-5xl font-bold">
-              About{" "}
-              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Me
-              </span>
-            </h1>
-            <p className="w-[50pc] text-xl text-center">
-              I'm a passionate software engineer with 2+ years of hands-on
+          <HeaderForSection
+            LeftTitle="About"
+            rightTitle="Me"
+            Description="I'm a passionate software engineer with 2+ years of hands-on
               experience in MERN and MEAN stacks, seeking a challenging role to
               contribute to innovative web applications, enhance user
               experiences, and grow professionally in a dynamic tech
-              environment.
-            </p>
-          </div>
+              environment."
+          />
 
           <div className="grid grid-cols-4 gap-5">
             <CardAbout
