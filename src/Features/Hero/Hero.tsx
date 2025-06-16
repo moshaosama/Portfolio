@@ -40,8 +40,8 @@ const Hero = ({ ScrollY }: HeroProps) => {
               Mohamed
             </span>
           </h1>
-          <p className="text-3xl text-gray-400">{text}|</p>
-          <p className="w-[48pc] font-semibold text-gray-400 text-center text-xl">
+          <p className="text-3xl text-gray-300">{text}|</p>
+          <p className="w-[48pc] font-semibold text-gray-300 text-center text-xl">
             Passionate about creating beautiful, functional, and user-friendly
             digital experiences with cutting-edge technologies and creative
             problem-solving.
