@@ -4,10 +4,13 @@ import useChangeText from "../../Hooks/useChangeText";
 import useSetAnimate from "../../Hooks/useSetAnimate";
 import { cn } from "../../lib/cn";
 import type { HeroProps } from "../../Types/Hero";
+import { useTransitionContext } from "../../Context/TransitionContext";
 
 const Hero = ({ ScrollY }: HeroProps) => {
   const { isAnimate } = useSetAnimate();
   const { text } = useChangeText();
+  const { isTextHero } = useTransitionContext();
+
   return (
     <>
       <div className="min-h-[52pc] max-sm:min-h-[37pc] text-white flex items-center justify-center relative overflow-hidden">
@@ -34,7 +37,12 @@ const Hero = ({ ScrollY }: HeroProps) => {
           className="flex justify-center flex-col items-center gap-10"
           style={{ transform: `translateY(${ScrollY * 0.5}px)` }}
         >
-          <h1 className="text-7xl font-bold max-sm:text-4xl">
+          <h1
+            className={cn(
+              "text-7xl font-bold max-sm:text-4xl transition-all duration-1000 relative",
+              isTextHero ? " top-0 opacity-100" : " top-8 opacity-0"
+            )}
+          >
             Hi, I'm{" "}
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Mohamed
