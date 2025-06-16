@@ -3,9 +3,11 @@ import { SkillData } from "../../Data/Skills";
 import { cn } from "../../lib/cn";
 import type { SkillDataType } from "../../Types/SkillDataType";
 import globalStyle from "../../Styles/global-style.module.css";
+import { useTransitionContext } from "../../Context/TransitionContext";
 
 const Skills = () => {
   const { container } = globalStyle;
+  const { isShowSkill } = useTransitionContext();
   return (
     <>
       <div
@@ -33,8 +35,11 @@ const Skills = () => {
               </div>
               <div className="w-full h-3 border border-slate-700 hover:border-slate-600 mt-4 rounded-full">
                 <div
-                  className={` h-3 rounded-l-full`}
-                  style={{ width: skill.degree, backgroundColor: skill.color }}
+                  className={` h-3 rounded-l-full transition-all duration-700`}
+                  style={{
+                    width: isShowSkill ? skill.degree : "0px",
+                    backgroundColor: skill.color,
+                  }}
                 ></div>
               </div>
             </div>
