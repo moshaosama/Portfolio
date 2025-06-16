@@ -13,7 +13,7 @@ const Projects = () => {
     <>
       <div
         className={cn(
-          "mt-56 flex flex-col items-center gap-20 justify-center text-white",
+          "mt-44 flex flex-col items-center gap-20 justify-center text-white",
           container
         )}
       >
@@ -24,7 +24,7 @@ const Projects = () => {
             passion"
         />
 
-        <div className="grid grid-cols-2 gap-y-10 gap-x-5">
+        <div className="grid grid-cols-2 max-sm:grid-cols-1 gap-y-10 gap-x-5">
           {ProjectData.map((project: ProjectDataType, index: number) => (
             <div
               key={index}
@@ -41,12 +41,16 @@ const Projects = () => {
                   <div className="rounded-t-xl group-hover:scale-105 bg-gradient-to-r from-blue-400 to-purple-400 w-full h-56 transition-all duration-700"></div>
                 )}
                 <div className="absolute right-10 bottom-10 flex items-center gap-5">
-                  <div className="p-2 bg-white/70 cursor-pointer backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors duration-300">
-                    <LuGithub color="black" size={30} />
-                  </div>
-                  <div className="p-2 bg-white/70 cursor-pointer backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors duration-300">
-                    <HiExternalLink color="black" size={30} />
-                  </div>
+                  <Link to={project.Github}>
+                    <div className="p-2 bg-white/70 cursor-pointer backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors duration-300">
+                      <LuGithub color="black" size={30} />
+                    </div>
+                  </Link>
+                  <Link to={project.LiveDemo}>
+                    <div className="p-2 bg-white/70 cursor-pointer backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors duration-300">
+                      <HiExternalLink color="black" size={30} />
+                    </div>
+                  </Link>
                 </div>
               </div>
               <div className="px-10 py-3 flex flex-col gap-3">
