@@ -8,7 +8,7 @@ import HeaderForSection from "../../Components/HeaderForSection";
 const About = () => {
   return (
     <>
-      <div className="flex justify-center mt-5 text-white">
+      <div className="flex justify-center mt-5 text-white" id="About">
         <div className="flex flex-col items-center justify-center gap-20">
           <HeaderForSection
             LeftTitle="About"
