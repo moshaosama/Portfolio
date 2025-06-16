@@ -20,7 +20,7 @@ const About = () => {
               environment."
           />
 
-          <div className="grid grid-cols-4 gap-5">
+          <div className="grid grid-cols-4 gap-5 max-sm:grid-cols-1 max-xl:grid-cols-2">
             <CardAbout
               Description="Writing maintainable, scalable, and efficient code"
               Icon={<IoCodeOutline />}
