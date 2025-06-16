@@ -2,3 +2,20 @@
   padding: 1.5pc 20pc;
   color: white;
 }
+@media (width < 40rem) {
+  .container {
+    padding: 20px 10px;
+  }
+}
+
+@media (width < 60rem) {
+  .container {
+    padding: 20px 10px;
+  }
+}
+
+@media (width < 90rem) {
+  .container {
+    padding: 20px 10px;
+  }
+}
