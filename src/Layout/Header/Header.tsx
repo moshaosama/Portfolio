@@ -12,7 +12,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY >= 100) {
+      if (window.scrollY >= 150) {
         setIsScroll(true);
       } else {
         setIsScroll(false);
@@ -30,10 +30,7 @@ const Header = () => {
       <header
         className={cn(
           container,
-          "w-full z-50 flex justify-between items-center  transition-all duration-500",
-          isScroll
-            ? "bg-[#0000007d] shadow-sm shadow-black fixed top-0 left-0"
-            : ""
+          "w-full z-50 flex justify-between items-center  transition-all duration-500"
         )}
       >
         <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400  bg-clip-text text-transparent">
