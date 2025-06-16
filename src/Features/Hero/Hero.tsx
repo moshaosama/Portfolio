@@ -10,7 +10,7 @@ const Hero = ({ ScrollY }: HeroProps) => {
   const { text } = useChangeText();
   return (
     <>
-      <div className="min-h-[52pc] text-white flex items-center justify-center relative overflow-hidden">
+      <div className="min-h-[52pc] max-sm:min-h-[37pc] text-white flex items-center justify-center relative overflow-hidden">
         <div
           className={cn(
             "absolute left-10 w-20 h-20 bg-blue-500/20 rounded-full transition-all duration-1000",
@@ -34,14 +34,14 @@ const Hero = ({ ScrollY }: HeroProps) => {
           className="flex justify-center flex-col items-center gap-10"
           style={{ transform: `translateY(${ScrollY * 0.5}px)` }}
         >
-          <h1 className="text-7xl font-bold">
+          <h1 className="text-7xl font-bold max-sm:text-4xl">
             Hi, I'm{" "}
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Mohamed
             </span>
           </h1>
           <p className="text-3xl text-gray-300">{text}|</p>
-          <p className="w-[48pc] font-semibold text-gray-300 text-center text-xl">
+          <p className="w-[48pc] max-sm:w-[23pc] max-sm:text-lg font-semibold text-gray-300 text-center text-xl">
             Passionate about creating beautiful, functional, and user-friendly
             digital experiences with cutting-edge technologies and creative
             problem-solving.
