@@ -4,6 +4,8 @@ export const ProjectData = [
     Title: "Spotify Clone",
     Description:
       "Full-stack Spotify clone with MEAN stack, featuring artist dashboard and integrated authentication.",
+    LiveDemo: "https://github.com/moshaosama/Spotify_Clone",
+    Github: "https://github.com/moshaosama/Spotify_Clone",
     Skills: [
       { name: "Angular" },
       { name: "Node.js" },
@@ -16,6 +18,8 @@ export const ProjectData = [
     Title: "Forever_Brand",
     Description:
       "Forever Brand is a modern e-commerce platform designed for clothing brands. It provides a seamless shopping experience with secure authentication, payment integration, and an admin dashboard for product management.",
+    LiveDemo: "https://forever-brand.vercel.app/",
+    Github: "https://github.com/moshaosama/Forever_Brand",
     Skills: [
       { name: "React" },
       { name: "Node.js" },
@@ -27,6 +31,8 @@ export const ProjectData = [
   {
     image: "Screenshot (158).png",
     Title: "BanKist",
+    LiveDemo: "https://ban-kist.vercel.app/",
+    Github: "https://github.com/moshaosama/BanKist",
     Description:
       "A responsive and animated frontend web app built entirely using React.js.",
     Skills: [
@@ -39,6 +45,8 @@ export const ProjectData = [
   {
     image: "Screenshot (164).png",
     Title: "ZACHA BAZAR",
+    LiveDemo: "https://e-storee-zeta.vercel.app/",
+    Github: "https://github.com/moshaosama/E_Store",
     Description:
       "A full-stack e-commerce application built with MERN stack (MongoDB, Express, React, Node.js). Features include secure payments, authentication, and deployment for a seamless shopping experience.",
     Skills: [
@@ -55,6 +63,8 @@ export const ProjectData = [
     Title: "LinkedIn_Clone",
     Description:
       "LinkedIn Clone is a web application built with Angular and Spring Boot, designed to replicate key features of LinkedIn, allowing users to sign up, create posts, and interact with content.",
+    LiveDemo: "https://github.com/moshaosama/LinkedIn_Clone",
+    Github: "https://github.com/moshaosama/LinkedIn_Clone",
     Skills: [
       { name: "Angular" },
       { name: "Tailwind CSS" },
@@ -68,6 +78,8 @@ export const ProjectData = [
   {
     image: "",
     Title: "Task-Management",
+    LiveDemo: "https://github.com/moshaosama/-Task-Management",
+    Github: "https://github.com/moshaosama/-Task-Management",
     Description:
       "A task management application that allows users to organize and track their tasks. The app includes features like user authentication, task CRUD operations, task categories, and LinkedIn profile scraping using Puppeteer.",
     Skills: [
