@@ -10,7 +10,7 @@ const Skills = () => {
     <>
       <div
         className={cn(
-          "flex flex-col items-center justify-center mt-56",
+          "flex flex-col items-center justify-center mt-44",
           container
         )}
       >
@@ -19,7 +19,7 @@ const Skills = () => {
           rightTitle="Skills"
           Description="Technologies and tools I work with"
         />
-        <div className="grid grid-cols-2 w-full gap-8 my-14">
+        <div className="grid grid-cols-2 max-sm:grid-cols-1 w-full gap-8 my-14">
           {SkillData.map((skill: SkillDataType, index: number) => (
             <div
               key={index}
