@@ -11,6 +11,7 @@ const Skills = () => {
   return (
     <>
       <div
+        id="Skills"
         className={cn(
           "flex flex-col items-center justify-center mt-44",
           container
