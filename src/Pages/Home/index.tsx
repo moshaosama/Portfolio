@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import Hero from "../../Features/Hero/Hero";
 import Header from "../../Layout/Header/Header";
 import About from "../../Features/About/About";
+import Projects from "../../Features/Projects/Projects";
+import Skills from "../../Features/Skills/Skills";
 
 const Home = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -18,6 +20,8 @@ const Home = () => {
         <Header />
         <Hero ScrollY={scrollY} />
         <About />
+        <Projects />
+        <Skills />
       </div>
     </>
   );
