@@ -12,6 +12,7 @@ const Projects = () => {
   return (
     <>
       <div
+        id="Projects"
         className={cn(
           "mt-44 flex flex-col items-center gap-20 justify-center text-white",
           container
