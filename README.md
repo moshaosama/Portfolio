@@ -48,13 +48,6 @@
 
 ---
 
-### 🚀 Projects I'm Proud Of
-| Project | Description | Tech |
-|--------|-------------|------|
-| 🎧 Spotify Clone | Music streaming app using Spotify API | React, Node.js, MongoDB |
-| 🛒 E-Commerce | Full-featured online store | Angular, Spring Boot, PostgreSQL |
-| 🧠 AI Chatbot | Smart chatbot for medical consultations | Dialogflow, React, Express |
-
 ---
 
 <p align="center">
