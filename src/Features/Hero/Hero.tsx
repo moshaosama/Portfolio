@@ -3,13 +3,14 @@ import SocialMedia from "../../Components/SocialMedia";
 import useChangeText from "../../Hooks/useChangeText";
 import useSetAnimate from "../../Hooks/useSetAnimate";
 import { cn } from "../../lib/cn";
+import type { HeroProps } from "../../Types/Hero";
 
-const Hero = () => {
+const Hero = ({ ScrollY }: HeroProps) => {
   const { isAnimate } = useSetAnimate();
   const { text } = useChangeText();
   return (
     <>
-      <div className="min-h-[50pc] text-white flex items-center justify-center relative overflow-hidden">
+      <div className="min-h-[52pc] text-white flex items-center justify-center relative overflow-hidden">
         <div
           className={cn(
             "absolute left-10 w-20 h-20 bg-blue-500/20 rounded-full transition-all duration-1000",
@@ -29,7 +30,10 @@ const Hero = () => {
           )}
         ></div>
 
-        <div className="flex justify-center flex-col items-center gap-10">
+        <div
+          className="flex justify-center flex-col items-center gap-10"
+          style={{ transform: `translateY(${ScrollY * 0.5}px)` }}
+        >
           <h1 className="text-7xl font-bold">
             Hi, I'm{" "}
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -52,16 +56,17 @@ const Hero = () => {
               Get In Touch
             </button>
           </div>
-          <div
-            className={cn(
-              "absolute transition-all duration-700",
-              isAnimate ? "bottom-0" : "bottom-5"
-            )}
-          >
-            <MdKeyboardArrowDown size={40} />
-          </div>
+        </div>
+        <div
+          className={cn(
+            "absolute transition-all duration-700",
+            isAnimate ? "bottom-5" : "bottom-10"
+          )}
+        >
+          <MdKeyboardArrowDown size={40} />
         </div>
       </div>
+      <hr className="h-0.5 border-none bg-blue-400 w-full" />
     </>
   );
 };
