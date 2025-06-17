@@ -11,12 +11,12 @@ import Sidebar from "../../Components/Sidebar";
 import { useSidebarContext } from "../../Context/SidebarContext";
 const Header = () => {
   const { container } = globalStyle;
-  const [, setIsScroll] = useState(false);
+  const [isScroll, setIsScroll] = useState(false);
   const { handleTriggerSidebar } = useSidebarContext();
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY >= 150) {
+      if (window.scrollY >= 1) {
         setIsScroll(true);
       } else {
         setIsScroll(false);
@@ -34,13 +34,14 @@ const Header = () => {
       <header
         className={cn(
           container,
-          "w-full z-50 flex justify-between items-center  transition-all duration-500"
+          "flex z-50 justify-between items-center w-full transition-all duration-1000",
+          isScroll ? "fixed top-0 bg-[#000000cf]" : ""
         )}
       >
-        <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400  bg-clip-text text-transparent">
-          <h1 className="text-lg font-sans">Mohamed Osama</h1>
+        <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+          <h1 className="font-sans text-lg">Mohamed Osama</h1>
         </div>
-        <div className="flex items-center gap-8 max-sm:hidden max-xl:gap-4">
+        <div className="flex gap-8 items-center max-sm:hidden max-xl:gap-4">
           <LinkHeader linkIcon={<CiHome />} linkTitle="Home" LinkTo="#" />
           <LinkHeader
             linkIcon={<IoPersonOutline />}
