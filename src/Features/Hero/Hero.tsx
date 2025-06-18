@@ -5,6 +5,7 @@ import useSetAnimate from "../../Hooks/useSetAnimate";
 import { cn } from "../../lib/cn";
 import type { HeroProps } from "../../Types/Hero";
 import { useTransitionContext } from "../../Context/TransitionContext";
+import { Link } from "react-router-dom";
 
 const Hero = ({ ScrollY }: HeroProps) => {
   const { isAnimate } = useSetAnimate();
@@ -16,35 +17,35 @@ const Hero = ({ ScrollY }: HeroProps) => {
       <div className="min-h-[52pc] max-sm:min-h-[37pc] text-white flex items-center justify-center relative overflow-hidden">
         <div
           className={cn(
-            "absolute left-10 w-20 h-20 bg-blue-500/20 rounded-full transition-all duration-1000",
+            "absolute left-10 w-20 h-20 rounded-full transition-all duration-1000 bg-blue-500/20",
             isAnimate ? "top-20" : "top-16"
           )}
         ></div>
         <div
           className={cn(
-            "absolute right-20 w-32 h-32 bg-purple-500/20 rounded-full transition-all duration-1000",
+            "absolute right-20 w-32 h-32 rounded-full transition-all duration-1000 bg-purple-500/20",
             isAnimate ? "top-40" : "top-36"
           )}
         ></div>
         <div
           className={cn(
-            "absolute  left-20 w-16 h-16 bg-pink-500/20 rounded-full transition-all duration-1000",
+            "absolute left-20 w-16 h-16 rounded-full transition-all duration-1000 bg-pink-500/20",
             isAnimate ? "bottom-20" : "bottom-24"
           )}
         ></div>
 
         <div
-          className="flex justify-center flex-col items-center gap-10"
+          className="flex flex-col gap-10 justify-center items-center"
           style={{ transform: `translateY(${ScrollY * 0.5}px)` }}
         >
           <h1
             className={cn(
-              "text-7xl font-bold max-sm:text-4xl transition-all duration-1000 relative",
-              isTextHero ? " top-0 opacity-100" : " top-8 opacity-0"
+              "relative text-7xl font-bold transition-all duration-1000 max-sm:text-4xl",
+              isTextHero ? "top-0 opacity-100" : "top-8 opacity-0"
             )}
           >
             Hi, I'm{" "}
-            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
               Mohamed
             </span>
           </h1>
@@ -56,13 +57,22 @@ const Hero = ({ ScrollY }: HeroProps) => {
           </p>
           <SocialMedia /> {/* Social Media Component */}
           <div className="flex gap-5">
-            <button className="w-40 py-3 hover:shadow-blue-400 hover:shadow-sm hover:scale-105 cursor-pointer transition-all duration-300  bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-full">
-              View My Work
-            </button>
+            <a
+              target="_blank"
+              href={
+                "https://drive.google.com/file/d/1Rf3kUzlh7tw5vVVeiTN8vHzfp1dIR4Ha/view?usp=drivesdk"
+              }
+            >
+              <button className="py-3 w-40 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-full transition-all duration-300 cursor-pointer hover:shadow-blue-400 hover:shadow-sm hover:scale-105">
+                View My Work
+              </button>
+            </a>
 
-            <button className="w-40 py-3 border-2 border-white rounded-full hover:scale-105 transition-all duration-300 cursor-pointer">
-              Get In Touch
-            </button>
+            <a href="#Contact">
+              <button className="py-3 w-40 rounded-full border-2 border-white transition-all duration-300 cursor-pointer hover:scale-105">
+                Get In Touch
+              </button>
+            </a>
           </div>
         </div>
         <div
