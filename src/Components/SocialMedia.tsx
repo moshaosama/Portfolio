@@ -5,21 +5,29 @@ import { VscGithubAlt } from "react-icons/vsc";
 const SocialMedia = () => {
   return (
     <>
-      <div className="flex items-center gap-10">
-        <VscGithubAlt
-          size={30}
-          cursor={"pointer"}
-          className="hover:scale-105 hover:text-blue-400 transition-all duration-300"
-        />
-        <FiLinkedin
-          size={30}
-          cursor={"pointer"}
-          className="hover:scale-105 hover:text-blue-400 transition-all duration-300"
-        />
+      <div className="flex gap-10 items-center">
+        <a href={"https://github.com/moshaosama"} target="_blank">
+          <VscGithubAlt
+            size={30}
+            cursor={"pointer"}
+            className="transition-all duration-300 hover:scale-105 hover:text-blue-400"
+          />
+        </a>
+
+        <a href={"https://www.linkedin.com/in/thisfekry/"} target="_blank">
+          <FiLinkedin
+            size={30}
+            cursor={"pointer"}
+            className="transition-all duration-300 hover:scale-105 hover:text-blue-400"
+          />
+        </a>
         <CgMail
           size={30}
-          cursor={"pointer"}
-          className="hover:scale-105 hover:text-blue-400 transition-all duration-300"
+          cursor="pointer"
+          onClick={() =>
+            (window.location.href = "mailto:mohamedOSFekry@gmail.com")
+          }
+          className="transition-all duration-300 hover:scale-105 hover:text-blue-400"
         />
       </div>
     </>
