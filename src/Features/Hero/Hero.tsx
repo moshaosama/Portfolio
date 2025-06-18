@@ -5,7 +5,6 @@ import useSetAnimate from "../../Hooks/useSetAnimate";
 import { cn } from "../../lib/cn";
 import type { HeroProps } from "../../Types/Hero";
 import { useTransitionContext } from "../../Context/TransitionContext";
-import { Link } from "react-router-dom";
 
 const Hero = ({ ScrollY }: HeroProps) => {
   const { isAnimate } = useSetAnimate();
